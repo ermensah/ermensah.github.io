@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edouard Mensah</title>
+<meta name="description" content="Edouard Mensah, applied economist. Research on environmental health, climate adaptation, technology adoption, measurement, and machine learning for well-being.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --text:#1d1f24; --muted:#5d636e; --line:#e4e1d9;
+  --accent:#1f5a7a; --accent-soft:#e6eff4; --tag:#f1eee7;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14171c; --surface:#1b1f26; --text:#e7e9ee; --muted:#a3a9b5; --line:#2c323c;
+    --accent:#7fb6d6; --accent-soft:#1f2c36; --tag:#232832;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14171c; --surface:#1b1f26; --text:#e7e9ee; --muted:#a3a9b5; --line:#2c323c;
+  --accent:#7fb6d6; --accent-soft:#1f2c36; --tag:#232832;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 "Source Serif 4",Georgia,serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.brand{font:600 17px Inter,system-ui,sans-serif;color:var(--text)}
+nav{display:flex;gap:18px;font:500 14px Inter,system-ui,sans-serif;overflow-x:auto}
+nav a{color:var(--muted);white-space:nowrap}
+nav a:hover{color:var(--accent);text-decoration:none}
+.hero{display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:start;padding:48px 0 28px}
+.photo{width:180px;height:180px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font:600 54px Inter,sans-serif;color:var(--accent);overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+h1{font:600 34px/1.2 "Source Serif 4",serif;margin:0 0 4px}
+.role{font:500 15px Inter,sans-serif;color:var(--muted);margin:0 0 14px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.btn{font:500 13px Inter,sans-serif;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--text)}
+.btn:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+section{padding:28px 0;border-top:1px solid var(--line)}
+h2{font:600 13px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+h3{font:600 15px Inter,sans-serif;color:var(--muted);margin:26px 0 10px}
+.themes{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.theme{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.theme b{display:block;font:600 14px Inter,sans-serif;margin-bottom:4px}
+.theme span{font-size:14px;color:var(--muted);line-height:1.5}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+.filters button{font:500 13px Inter,sans-serif;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.paper{padding:14px 0;border-bottom:1px dashed var(--line)}
+.paper:last-child{border-bottom:0}
+.paper .title{font-weight:600;font-size:17px}
+.paper .meta{color:var(--muted);font-size:15px}
+.paper .venue{font-style:italic}
+.status{display:inline-block;font:600 11px Inter,sans-serif;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:4px;background:var(--accent-soft);color:var(--accent);margin-left:6px;vertical-align:2px}
+.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;align-items:center}
+.actions a,.actions summary{font:500 12px Inter,sans-serif;padding:2px 9px;border:1px solid var(--line);border-radius:4px;color:var(--text);background:var(--surface);cursor:pointer;list-style:none}
+.actions summary::-webkit-details-marker{display:none}
+.actions a:hover,.actions summary:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+details.abs{display:contents}
+details.abs[open] summary{background:var(--accent-soft);color:var(--accent)}
+details.abs p{flex-basis:100%;margin:8px 0 2px;font-size:15px;color:var(--text);background:var(--surface);border-left:3px solid var(--accent);padding:10px 14px;border-radius:0 6px 6px 0}
+.tags{display:inline-flex;gap:4px;margin-left:4px}
+.tag{font:500 11px Inter,sans-serif;color:var(--muted);background:var(--tag);padding:2px 7px;border-radius:4px}
+.hidden{display:none}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{padding:6px 0;border-bottom:1px dashed var(--line)}
+ul.plain li:last-child{border-bottom:0}
+.course{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.course>span:first-child{flex:1 1 320px}
+.course .when{color:var(--muted);font:14px Inter,sans-serif;white-space:nowrap}
+footer{padding:28px 0 48px;color:var(--muted);font:13px Inter,sans-serif;border-top:1px solid var(--line)}
+.theme-toggle{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;width:32px;height:32px;cursor:pointer;flex:none}
+@media (max-width:640px){
+  .hero{grid-template-columns:1fr;gap:18px;padding-top:28px}
+  .photo{width:120px;height:120px;font-size:38px}
+  nav{gap:12px;font-size:13px}
+  .brand{display:none}
+  h1{font-size:28px}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Edouard Mensah</a>
+    <nav aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <!-- To add a photo: put photo.jpg next to this file and replace "EM" with <img src="photo.jpg" alt="Edouard Mensah"> -->
+    <div class="photo"><img src="photo.jpg" alt="Edouard Mensah"></div>
+    <div>
+      <h1>Edouard Mensah</h1>
+      <p class="role">Applied Economist · Ph.D., University of Georgia</p>
+      <p>I study how households, firms, and markets respond to environmental risk and new technologies, and how better measurement changes what we learn about them. My work combines causal inference, field experiments, large administrative and scanner data, and machine learning, with applications to environmental health and climate adaptation, disaster-driven markets, technology adoption, and population well-being in the United States and sub-Saharan Africa.</p>
+      <p>I am currently an economist in the technology sector. Before that, I was a postdoctoral scholar and instructor at Penn State University and worked on impact evaluations with the World Bank's Africa Gender Innovation Lab and institutional innovations with the International Crops Research Institute for the Semi-Arid Tropics (ICRISAT).</p>
+      <div class="links">
+        <a class="btn" href="mailto:mensahedouard@gmail.com">Email</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=UJfuyLYAAAAJ&amp;hl=en">Google Scholar</a>
+        <a class="btn" href="https://www.linkedin.com/in/edouard-romeo-mensah-736a429/">LinkedIn</a>
+        <a class="btn" href="https://twitter.com/edouardmensah">X / Twitter</a>
+        <a class="btn" href="https://rpubs.com/kafumawu">RPubs</a>
+        <a class="btn" href="https://drive.google.com/file/d/11XGzLr3mOf44SWPdsTgt3DPZMBrd_2S0/view?usp=sharing">CV (PDF)</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="themes" aria-label="Research themes">
+    <h2>Research themes</h2>
+    <div class="themes">
+      <div class="theme"><b>Environmental health &amp; climate adaptation</b><span>Heat, humidity, storms and the private technologies people use to cope.</span></div>
+      <div class="theme"><b>Markets under disaster risk</b><span>Pricing, stockpiling and savings when hurricanes hit.</span></div>
+      <div class="theme"><b>Technology adoption &amp; contracts</b><span>New crops, clean cooking, ICT and market access programs.</span></div>
+      <div class="theme"><b>Measurement &amp; machine learning</b><span>Survey error, prediction, and ML for poverty, food crises and health.</span></div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <div class="filters" role="group" aria-label="Filter by topic">
+      <button data-f="all" aria-pressed="true">All</button>
+      <button data-f="env" aria-pressed="false">Environment &amp; climate</button>
+      <button data-f="tech" aria-pressed="false">Technology &amp; markets</button>
+      <button data-f="ml" aria-pressed="false">Measurement &amp; ML</button>
+      <button data-f="dev" aria-pressed="false">Development</button>
+    </div>
+
+    <h3>Working papers</h3>
+
+    <div class="paper" data-t="env tech">
+      <div class="title">Is Air Conditioning Worth More Where It Is Hotter? Humidity, Heat, and U.S. Home Prices</div>
+      <div class="meta">with I. Sue Wing and D. H. Wrenn · 2026</div>
+      <div class="actions">
+        <a href="https://drive.google.com/file/d/12q4WWyfj1BoXbzdRljmmYghxra0sbmnp/view?usp=sharing">Paper</a>
+        <details class="abs"><summary>Abstract</summary><p>Using 25.6 million single-family home sales in 36 states (2001–2019) linked to parcel-level daily temperature and humidity, this paper measures what U.S. homebuyers pay for air conditioning, the main private technology for adapting to heat. Within 1-km neighborhoods, AC raises sale prices by about 8.6% ($13,700). Holding humidity fixed, the premium falls rather than rises with the frequency of extreme heat, and it is close to zero in hot, dry places, pointing to humidity as a key dimension of heat stress omitted from temperature-only projections of cooling demand. Incomplete coding of AC in public assessor records also systematically distorts measured adoption across climates.</p></details>
+      </div>
+    </div>
+
+    <div class="paper" data-t="env tech">
+      <div class="title">Is the Price Right? Evidence on Price Gouging with Application to Hurricane Harvey</div>
+      <div class="meta">with C. E. Landry and T. A. Smith · 2026</div>
+      <div class="actions">
+        <a href="https://drive.google.com/file/d/1TM7w_20RqxT5I2epsjO1Nd5KOyJPIRbr/view">Paper</a>
+        <details class="abs"><summary>Abstract</summary><p>How much should prices change when a hurricane hits, given how demand changes, and how much did they change during Hurricane Harvey? Using a model of optimal pricing and retail scanner data, we estimate the price changes justified by disaster-driven shifts in consumer demand. Prices of toilet paper, milk and bottled water generally changed very little (typically under 12%) and were mostly consistent with demand-driven market behavior, suggesting little evidence of excessive pricing. Many state anti-price-gouging caps may be too rigid because they can block economically justified price adjustments.</p></details>
+      </div>
+    </div>
+
+    <div class="paper" data-t="ml dev">
+      <div class="title">Who Answers the Survey? Experimental Evidence on Respondent Selection and Nonclassical Measurement Error</div>
+      <div class="meta">with A. D. Jones, A. Dillon and J. W. Somé · 2026</div>
+      <div class="actions">
+        <details class="abs"><summary>Abstract</summary><p>In 1,028 farm households in Burkina Faso, we randomly assigned who reported farm activities (the household head, a random adult, or each plot manager). Proxy reports create an inverse farm size–productivity relationship, cut the labor elasticity of output by three quarters, and reverse the policy conclusion on child diets. We decompose the distortions into attenuation and outcome-correlated error, propose a diagnostic toolkit and practitioner checklist, and test a cross-fitted two-sample machine learning prediction correction.</p></details>
+      </div>
+    </div>
+
+    <div class="paper" data-t="ml dev">
+      <div class="title">Predicting Food Crises Using Price Signals: A Machine Learning Application in the Sahel Region of West Africa</div>
+      <div class="meta">with N. S. Sayouti, T. A. Kakpo and M. D. Amin · <span class="venue">Revise and resubmit, PNAS</span></div>
+      <div class="actions"><a href="https://drive.google.com/file/d/1LJdMHzxk7Pd1xO79zCtSii9c9dDcu4Wx/view?usp=sharing">Paper</a></div>
+    </div>
+
+    <div class="paper" data-t="tech">
+      <div class="title">Marketing Contracts for an Unfamiliar Oilseed Crop under Aversion to Risk and Ambiguity: The Case of Carinata in the U.S.</div>
+      <div class="meta">with G. Colson · <span class="venue">Revised and resubmitted, American Journal of Agricultural Economics</span></div>
+      <div class="actions"><a href="https://drive.google.com/file/d/1BiPUQSqdhTb0ny6VxZLdpJZp7Py1sSkF/view?usp=sharing">Paper</a></div>
+    </div>
+
+    <h3>Research in progress</h3>
+    <ul class="plain">
+      <li class="paper" data-t="tech dev">Certified Neighbors: Market Access Programs and the Price of Being Uncertified. Evidence from Hass Avocado Certification in Kenya <span class="meta">(with P. G. Naso and M. Sarr)</span></li>
+      <li class="paper" data-t="ml dev">Heterogeneity and Measurement Errors in the Farm Size–Productivity Relationship <span class="meta">(with K. Nchare)</span></li>
+      <li class="paper" data-t="ml dev">The Inverse Farm Size–Productivity Relationship under Land Mis-measurement, Weather and Price Risks: Panel Evidence from Uganda <span class="meta">(with G. Kostandini)</span></li>
+      <li class="paper" data-t="dev">Impact Evaluation of the Program of Agricultural Export Diversification in Niger <span class="meta">(with M. Ngatia, M. O'Sullivan and L. Traoré)</span></li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <div class="paper" data-t="ml dev">
+      <div class="title">Predicting Poverty-Resilient Households Using Machine Learning in Sub-Saharan Africa</div>
+      <div class="meta">with N. S. Sayouti · <span class="venue">Oxford Bulletin of Economics and Statistics</span><span class="status">Forthcoming</span></div>
+      <div class="actions">
+        <a href="https://drive.google.com/file/d/18_62dplCey6_ll18TZTKwEs2AvAcM57Q/view?usp=sharing">Paper</a>
+        <details class="abs"><summary>Abstract</summary><p>We forecast household resilience to poverty by estimating each household's conditional well-being distribution with a mixture density network that combines a Gaussian mixture model with a neural network. Resilience is the probability of remaining above a poverty line. Using three waves of nationally representative panel data from Nigeria, we compare this approach to two-step conditional moments, elastic net, single-Gaussian neural networks, gradient boosting and tree-based mixture models under temporal and spatial out-of-sample validation. The mixture density network forecasts well-being distributions most accurately, reducing bias in resilience scores and their policy implications.</p></details>
+      </div>
+    </div>
+
+    <div class="paper" data-t="env">
+      <div class="title"><a href="https://doi.org/10.1016/j.ecolecon.2025.108769">Saving for a Rainy Day: The Impact of Storms on Savings Rates</a></div>
+      <div class="meta">with M. J. Filipski · <span class="venue">Ecological Economics</span> 239 (2026), 108769</div>
+    </div>
+
+    <div class="paper" data-t="env tech dev">
+      <div class="title"><a href="https://doi.org/10.1016/j.erss.2026.104614">From Charcoal to Clean Cooking: Understanding Urban Household Energy Choices and Behaviors in Southern Africa</a></div>
+      <div class="meta">with L. C. Zulu, I. N. S. Djenontin, R. B. Richardson, C. B. L. Jumbe et al. · <span class="venue">Energy Research &amp; Social Science</span> 134 (2026), 104614</div>
+    </div>
+
+    <div class="paper" data-t="env">
+      <div class="title"><a href="https://doi.org/10.1017/aae.2025.10025">Do Households Adapt? Hurricane Exposure and the Stockpiling of Essential Goods</a></div>
+      <div class="meta">with D. H. Wrenn and E. Jaenicke · <span class="venue">Journal of Agricultural and Applied Economics</span> 58(1) (2025)</div>
+    </div>
+
+    <div class="paper" data-t="ml dev">
+      <div class="title"><a href="https://doi.org/10.1016/j.jdeveco.2023.103198">Respondent Biases in Agricultural Household Surveys</a></div>
+      <div class="meta">with A. Dillon · <span class="venue">Journal of Development Economics</span> 166 (2024), 103198</div>
+    </div>
+
+    <div class="paper" data-t="env dev">
+      <div class="title"><a href="https://doi.org/10.1016/j.forpol.2023.103141">The Human Well-Being Outcomes of Tree Plantations in Sub-Saharan Africa: A Reassessment of Evidence Using Longitudinal Subnational-Year Data</a></div>
+      <div class="meta">with N. Shinde, T. A. Kakpo and I. N. S. Djenontin · <span class="venue">Forest Policy and Economics</span> 160 (2024), 103141</div>
+    </div>
+
+    <div class="paper" data-t="tech">
+      <div class="title"><a href="https://doi.org/10.1002/aepp.13481">The Interplay of Geopolitics and Agricultural Commodity Prices: Analyzing Policy Implications</a></div>
+      <div class="meta">with R. Goyal and S. Steinbach · <span class="venue">Applied Economic Perspectives and Policy</span> (2024)</div>
+    </div>
+
+    <div class="paper" data-t="dev">
+      <div class="title"><a href="https://www.journals.uchicago.edu/doi/10.1086/718187">Up Before Dawn: Experimental Evidence from a Cross-border Trader Training at the DRC–Rwanda Border</a></div>
+      <div class="meta">with K. Croke, M. E. García Mora, M. Goldstein and M. O'Sullivan · <span class="venue">Economic Development and Cultural Change</span> 71(3) (2023), 863–901</div>
+    </div>
+
+    <div class="paper" data-t="tech dev">
+      <div class="title"><a href="https://doi.org/10.1111/agec.12298">Cotton Farmers' Willingness to Pay for Pest Management Services in Northern Benin</a></div>
+      <div class="meta">with C. P. Kpadé, M. Fok and J. Ndjeunga · <span class="venue">Agricultural Economics</span> 48(1) (2017), 105–114</div>
+    </div>
+
+    <div class="paper" data-t="tech dev">
+      <div class="title"><a href="https://doi.org/10.4000/economierurale.4174">Facteurs d'adoption de la lutte étagée ciblée au Nord-Bénin</a> <span class="meta">[Adoption factors of Targeted Staggered Control in Northern Benin]</span></div>
+      <div class="meta">with C. P. Kpadé · <span class="venue">Économie Rurale</span> 338 (2013), 77–91</div>
+    </div>
+
+    <h3>Editorial</h3>
+    <div class="paper" data-t="env tech dev">
+      <div class="title"><a href="https://doi.org/10.5325/jdevepers.6.1-2.0001">Rethinking Resilience: Lessons from Climate-Smart Innovation in African Agriculture</a></div>
+      <div class="meta">with M. Sarr and S. Vallury · <span class="venue">Journal of Development Perspectives</span> 6(1–2) (2026), 1–7</div>
+    </div>
+
+    <h3>Book chapter</h3>
+    <div class="paper" data-t="tech dev">
+      <div class="title"><a href="https://www.researchgate.net/publication/259081913_Effect_of_Participation_in_ICT-Based_Market_Information_Services_on_Transaction_Costs_and_Household_Income_Among_Smallholder_Farmers_in_Malawi">Effect of Participation in ICT-Based Market Information Services on Transaction Costs and Household Income among Smallholder Farmers in Malawi</a></div>
+      <div class="meta">with S. P. Katengeza, J. J. Okello and N. Jambo · In <span class="venue">Technologies for Sustainable Development: A Way to Reduce Poverty?</span> Springer (2014), ch. 17, 197–207</div>
+    </div>
+
+    <h3>Policy working papers</h3>
+    <ul class="plain">
+      <li class="paper" data-t="ml dev"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3801258">Respondent Biases in Household Surveys</a> <span class="meta">(with A. Dillon) · Global Poverty Research Lab WP 21-103, Northwestern University, 2021</span></li>
+      <li class="paper" data-t="dev"><a href="https://openknowledge.worldbank.org/entities/publication/fbd656f7-992a-55cc-98ef-c208c9c18005">Up Before Dawn: Experimental Evidence from a Cross-border Trader Training at the DRC–Rwanda Border</a> <span class="meta">· World Bank Policy Research WP 9123, 2020</span></li>
+      <li class="paper" data-t="dev"><a href="https://openknowledge.worldbank.org/bitstream/handle/10986/28363/WPS8186.pdf?sequence=1&amp;isAllowed=y">Moving Out and Up: Panel Data Evidence on Migration and Poverty in Uganda</a> <span class="meta">(with M. O'Sullivan) · World Bank Policy Research WP 8186, 2017</span></li>
+    </ul>
+
+    <h3>Registered trials</h3>
+    <ul class="plain">
+      <li class="paper" data-t="tech dev"><a href="https://doi.org/10.1257/rct.14585-1.0">Uptake of Best Management Practices by Rice Farmers in Nigeria: Bundling Women's Empowerment Training, Digital Extension, and In-Person Extension</a> <span class="meta">· AEA RCT Registry, 2024</span></li>
+      <li class="paper" data-t="tech dev"><a href="https://doi.org/10.1257/rct.11741-1.0">Measuring Spillover Impact of a Market Access Program of Avocados in Kenya</a> <span class="meta">· AEA RCT Registry, 2023</span></li>
+    </ul>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <ul class="plain">
+      <li><div class="course"><span><b>Applied Econometrics II</b> (graduate), Instructor · Penn State University · <a href="https://drive.google.com/file/d/1Cvhf43qJs0Cgccm3H8iKwa50vExkKEy-/view?usp=sharing">Syllabus</a> · <a href="https://rpubs.com/PushUntilSomethingHappens">Assignments</a></span><span class="when">Spring 2025</span></div></li>
+      <li><div class="course"><span><b>Microeconometrics</b> (graduate), Teaching Assistant · Penn State University</span><span class="when">Fall 2023</span></div></li>
+      <li><div class="course"><span>Guest lecture, <i>Imminent Hurricane, Economic Consequences, and Adaptation of Purchasing Behavior</i> · Arizona State University</span><span class="when">Fall 2023</span></div></li>
+      <li><div class="course"><span>Guest lecture, <i>Globalization Influences on Migration</i> · Penn State School of International Affairs</span><span class="when">Fall 2023</span></div></li>
+      <li><div class="course"><span>Guest lecture, <i>Property Rights, Land Ownership, and Natural Resources in Developing Countries</i> · Penn State School of International Affairs</span><span class="when">Spring 2023</span></div></li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <ul class="plain">
+      <li><div class="course"><span>Economist, technology sector</span><span class="when">2025–present</span></div></li>
+      <li><div class="course"><span>Postdoctoral Scholar &amp; Instructor, Penn State University</span><span class="when">2022–2025</span></div></li>
+      <li><div class="course"><span>Ph.D., Agricultural &amp; Applied Economics, University of Georgia</span><span class="when">2022</span></div></li>
+      <li><div class="course"><span>Impact Evaluation Economist / Junior Fellow, World Bank Africa Gender Innovation Lab</span><span class="when">2014–2016, 2019, 2020</span></div></li>
+      <li><div class="course"><span>Associate Professional Officer (Economics), International Crops Research Institute for the Semi-Arid Tropics (ICRISAT)</span><span class="when">2011–2014</span></div></li>
+      <li><div class="course"><span>M.S., Agricultural Development, University of Copenhagen</span><span class="when">2010</span></div></li>
+      <li><div class="course"><span>B.S. Agricultural Engineering, M.S. Agricultural Economics, National School of Agriculture, Meknes</span><span class="when">2006</span></div></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Edouard Mensah · <a href="mailto:mensahedouard@gmail.com">mensahedouard@gmail.com</a></div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, t=document.getElementById('themeToggle');
+  try{var s=localStorage.getItem('theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  t.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    var n=dark?'light':'dark'; root.setAttribute('data-theme',n);
+    try{localStorage.setItem('theme',n);}catch(e){}
+  });
+  var btns=document.querySelectorAll('.filters button');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    var f=b.dataset.f;
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    document.querySelectorAll('[data-t]').forEach(function(p){
+      p.classList.toggle('hidden', f!=='all' && p.dataset.t.split(' ').indexOf(f)<0);
+    });
+  });});
+})();
+</script>
+</body>
+</html>
